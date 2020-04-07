@@ -1,0 +1,23 @@
+.page-container {
+  background: url("../../../assets/images/man-logo.png") no-repeat;
+  background-size: 100%;
+
+  ion-card {
+    ion-card-content {
+      .login-form {
+        margin-top: 150px;
+
+        .forgot-password {
+          display: block;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+
+        .create-account {
+          display: block;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}

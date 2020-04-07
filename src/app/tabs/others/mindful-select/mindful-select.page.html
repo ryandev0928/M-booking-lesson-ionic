@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="page-container has-header">
+    <ion-card class="wide-full hide-box-shadow">
+      <ion-card-content>
+        <ion-card class="wide-full hide-box-shadow">
+          <ion-card-content class="ion-text-center">
+            Choose one of the screens below for the exercise.
+            Try to focus on the images and details that you can see on the
+            screen (colors, shapes …).
+            <br><br>
+            Your attention might wander. Just notice when this happens and
+            bring your mind back to the screen. Try to stay in the moment and
+            notice.
+            <br><br>
+            Try this mindfulness exercise for 3-5 minutes.
+          </ion-card-content>
+        </ion-card>
+        <ion-row>
+          <ion-col size="6" *ngFor="let category of categories">
+            <ion-card class="wide-full hide-box-shadow gradient-green dark"
+                      (click)="startMindfulnessExercise(category)">
+              <ion-card-content class="ion-text-center" style="padding: 5px 5px 10px 5px;">
+                <div style="width:100%;height:80px;opacity:.7;margin-bottom:5px;border-top-right-radius:5px;border-top-left-radius:5px;" [ngStyle]="{background: 'url(' + api + category.category_thumbnail + ') top center', backgroundSize: '100%'}"></div>
+                <label class="breathing-type color-white">
+                  {{language.getCurrentLanguage() == 'english' ? category.category_name_in_english : category.category_name_in_french}}
+                </label>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
